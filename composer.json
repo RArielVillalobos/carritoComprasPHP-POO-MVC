@@ -1,0 +1,7 @@
+{
+    "name": "html2pdf",
+    "description": "html to pdf",
+    "require": {
+        "spipu/html2pdf": "^5.2"
+    }
+}

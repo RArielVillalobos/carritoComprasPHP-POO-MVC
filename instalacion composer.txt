@@ -1,0 +1,23 @@
+1.4. Instalación en servidores Linux
+1.4.1. Instalación en local
+Entra en el directorio de tu proyecto con la consola de comandos y descarga e instala Composer ejecutando el siguiente comando:
+
+$ curl -sS https://getcomposer.org/installer | php
+El comando anterior comprueba algunas opciones de configuración de PHP y después descarga un archivo llamado composer.phar. Este archivo es el ejecutable de Composer. Se trata de un archivo en formato PHAR (PHP archive), que es el formato utilizado por las aplicaciones PHP para empaquetarse en un único archivo y poder ejecutarse fácilmente en la línea de comandos.
+
+Si quieres instalar Composer en un directorio específico, utiliza la opción --install-dir indicando el directorio mediante una ruta relativa o absoluta:
+
+$ curl -sS https://getcomposer.org/installer | php -- --install-dir=bin
+1.4.2. Instalación global
+El método anterior requiere que instales Composer en todos y cada uno de tus proyectos. Si tienes muchos proyectos, esta tarea se vuelve tediosa rápidamente. Para evitarlo, puedes instalar Composer de forma global.
+
+Para poder acceder a Composer desde cualquier lugar, lo único que tienes que hacer es copiar el archivo composer.phar a cualquier directorio que forme parte del PATH de tu ordenador. Además, puedes hacer que el archivo sea ejecutable y así no tendrás que invocarlo con el comando php.
+
+Ejecuta los siguientes comandos en tu consola para instalar Composer globalmente y poder ejecutarlo desde cualquier lugar con el comando composer:
+
+$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/local/bin/composer
+NOTA
+Si el comando anterior falla debido a los permisos, ejecuta el comando mv con sudo.
+
+A partir de ahora, ya puedes ejecutar Composer simplemente escribiendo composer, en vez de tener que escribir php composer.phar.
